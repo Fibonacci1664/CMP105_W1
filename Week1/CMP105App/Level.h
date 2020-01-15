@@ -5,9 +5,10 @@
 #include <iostream>
 
 
-class Level{
+class Level
+{
 public:
-	Level(sf::RenderWindow* hwnd);
+	Level(sf::RenderWindow* p_window);
 	~Level();
 
 	void handleInput();
@@ -17,8 +18,15 @@ public:
 private:
 	void beginDraw();
 	void endDraw();
-	sf::RenderWindow* window;
 
-	sf::RectangleShape rect;
-	sf::CircleShape circle;
+	sf::RenderWindow* m_window;
+
+	sf::RectangleShape m_rect_1;
+	sf::RectangleShape m_rect_2;
+	sf::RectangleShape m_rect_3;
+	sf::RectangleShape m_rect_4;
+	sf::CircleShape m_circle;
+
+	sf::Font m_font;
+	sf::Text m_text;
 };
